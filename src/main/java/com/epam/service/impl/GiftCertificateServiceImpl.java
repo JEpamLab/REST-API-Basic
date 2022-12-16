@@ -25,7 +25,7 @@ public class GiftCertificateServiceImpl implements GiftCertificatesService {
     private final GiftCertificatesRepoImpl giftCertificatesRepo;
 
     @Override
-    public List<GiftCertificates> getAll() throws Exception {
+    public List<GiftCertificates> getAll() throws NullPointerException {
         System.out.println("ishladi");
         return giftCertificatesRepo.findAll();
     }

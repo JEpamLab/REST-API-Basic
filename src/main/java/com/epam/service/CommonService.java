@@ -12,7 +12,7 @@ import java.util.Optional;
  * @author Otabek Javqochdiyev
  * */
 public interface CommonService<T, D> {
-    public List<T> getAll() throws Exception;
+    public List<T> getAll() throws NullPointerException;
 
 //    public Optional<T> getById(D id) throws Exception;
 

@@ -2,7 +2,6 @@ package com.epam.controller;
 
 import com.epam.controller.response.ResponseHandler;
 import com.epam.controller.response.ResponseMessage;
-import com.epam.exception.ApiException;
 import com.epam.exception.IncorrectParameterException;
 import com.epam.model.entity.GiftCertificates;
 import com.epam.service.impl.GiftCertificateServiceImpl;
@@ -38,9 +37,11 @@ public class GiftCertificatesController {
     }
 
     @GetMapping("/filter")
-    public List<GiftCertificates> giftCertificatesByParameter(@RequestParam MultiValueMap<String, String> allRequestParams) {
-        System.out.println("controller dofilter!");
-        return giftCertificateService.doFilter(allRequestParams);
+    public ResponseEntity<List<GiftCertificates>> giftCertificatesByParameter(@RequestParam MultiValueMap<String, String> allRequestParams) {
+        System.out.println(giftCertificateService.doFilter(allRequestParams));
+
+        return ResponseEntity.ok(giftCertificateService.doFilter(allRequestParams));
+
     }
 
     @GetMapping(value = "/{id}")
@@ -64,8 +65,8 @@ public class GiftCertificatesController {
 
     }
 
-    @PatchMapping(path ="{id}", consumes = "application/json")
-    public ResponseEntity<Object> updateGiftCertificate(@PathVariable("id") int id, @RequestBody GiftCertificates giftCertificate) throws  IncorrectParameterException {
+    @PatchMapping(path = "{id}", consumes = "application/json")
+    public ResponseEntity<Object> updateGiftCertificate(@PathVariable("id") int id, @RequestBody GiftCertificates giftCertificate) throws IncorrectParameterException {
         boolean check = giftCertificateService.update(id, giftCertificate);
         if (check) {
             return ResponseHandler.generateResponse(ResponseMessage.SUCCESSFULLY_UPDATED + id, HttpStatus.OK);
@@ -76,11 +77,12 @@ public class GiftCertificatesController {
 
     //Delete
     @DeleteMapping("/{id}")
-    public ResponseEntity<GiftCertificates> delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id) {
         if (giftCertificateService.delete(id)) {
-            return ResponseEntity.noContent().build();
+            return ResponseHandler.generateResponse(ResponseMessage.SUCCESSFULLY_DELETED + id, HttpStatus.OK);
         }
-        return ResponseEntity.badRequest().build();
+        return ResponseHandler.generateResponse(ResponseMessage.DELETE_ERROR + id, HttpStatus.INTERNAL_SERVER_ERROR);
+
     }
 
 

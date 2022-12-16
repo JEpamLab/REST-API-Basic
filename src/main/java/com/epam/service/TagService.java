@@ -5,7 +5,7 @@ import com.epam.model.entity.Tag;
 import java.util.Optional;
 
 public interface TagService extends CommonService<Tag,Long>{
-    void create(Tag data) throws Exception;
+    void create(Tag data) throws NullPointerException;
 
     Optional<Tag> findById(Integer id);
     boolean delete(Integer id);

@@ -23,7 +23,7 @@ public class TagServiceImpl implements TagService {
 
 
     @Override
-    public List<Tag> getAll() throws Exception {
+    public List<Tag> getAll() throws NullPointerException {
         return tagRepo.findAll();
     }
 
@@ -31,7 +31,7 @@ public class TagServiceImpl implements TagService {
 
 
     @Override
-    public void create(Tag data)  {
+    public void create(Tag data) throws NullPointerException {
         tagRepo.create(data);
     }
 

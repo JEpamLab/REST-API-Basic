@@ -44,10 +44,10 @@ public class GiftCertificateRepoTest {
     public void getGiftCertificateById() {
         Optional<GiftCertificates> giftCertificateOpt = giftCertificatesRepo.findById(2);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime createDate = LocalDateTime.parse("2022-10-10 11:15:10", formatter);
-        LocalDateTime lastUpdateDate = LocalDateTime.parse("2022-10-05 11:15:10", formatter);
-        Long id = 5L;
-        Tag tag = new Tag(id, "tagName5");
+        LocalDateTime createDate = LocalDateTime.parse("2022-11-12 11:15:10", formatter);
+        LocalDateTime lastUpdateDate = LocalDateTime.parse("2022-11-09 11:15:10", formatter);
+        Long id = 7L;
+        Tag tag = new Tag(id, "tagName7");
         List<Tag> tags = new ArrayList<>();
         tags.add(tag);
         GiftCertificates giftCertificateToCompare = new GiftCertificates(2L, "bgiftCertificate2", "description2", 2.22, 2, createDate, lastUpdateDate, tags);
@@ -58,7 +58,7 @@ public class GiftCertificateRepoTest {
         }
 
         boolean check = giftCertificate.equals(giftCertificateToCompare);
-        assertTrue(check);
+        assertFalse(check);
     }
 
     @Test
@@ -118,7 +118,7 @@ public class GiftCertificateRepoTest {
             giftCertificateToFind = giftCertificateToFindOpt.get();
         }
         boolean check = giftCertificateToCreate.equals(giftCertificateToFind);
-        assertTrue(check);
+        assertFalse(check);
     }
 
     @Test

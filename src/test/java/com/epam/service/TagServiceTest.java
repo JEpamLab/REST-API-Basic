@@ -20,8 +20,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TagServiceTest {
 
-    private TagServiceImpl tagServiceImpl;
-    private TagRepoImpl tagDaoImpl;
+    private TagService tagServiceImpl;
+    private TagRepoImpl tagRepo;
 
     @BeforeEach
     public void setUp() {
@@ -29,8 +29,8 @@ public class TagServiceTest {
                 .addScript("classpath:schema.sql")
                 .addScript("classpath:data.sql")
                 .build();
-        tagDaoImpl = new TagRepoImpl(dataSource);
-        tagServiceImpl = new TagServiceImpl(tagDaoImpl);
+        tagRepo = new TagRepoImpl(dataSource);
+        tagServiceImpl = new TagServiceImpl(tagRepo);
     }
 
     @AfterEach
@@ -40,13 +40,13 @@ public class TagServiceTest {
     }
 
     @Test
-    public void findAll() throws Exception {
+    public void findAll() throws NullPointerException {
         List<Tag> tags = tagServiceImpl.getAll();
         assertEquals(5, tags.size());
     }
 
     @Test
-    public void findById() {
+    public void findById() throws NullPointerException{
         Optional<Tag> tagOptional = tagServiceImpl.findById(2);
         Tag tag = new Tag();
         if (tagOptional.isPresent()) {
@@ -57,8 +57,10 @@ public class TagServiceTest {
 
 
     @Test
-    public void create()  {
-        Tag tagToCreate = new Tag(6L, "Tag 6");
+    public void create() throws NullPointerException {
+        Long id=6L;
+        Tag tagToCreate = new Tag(id, "Tag 6");
+        System.out.println(tagToCreate);
         tagServiceImpl.create(tagToCreate);
         Optional<Tag> tagOptional = tagServiceImpl.findById(6);
         Tag tag = new Tag();
@@ -69,14 +71,14 @@ public class TagServiceTest {
     }
 
     @Test
-    public void delete() throws Exception {
+    public void delete() throws NullPointerException {
         tagServiceImpl.delete(4);
         List<Tag> tags = tagServiceImpl.getAll();
         assertEquals(4, tags.size());
     }
 
     @Test
-    public void findByName() {
+    public void findByName() throws NullPointerException{
         Optional<Tag> tagOptional = tagServiceImpl.findByName("red");
         Tag tag = new Tag();
         if (tagOptional.isPresent()) {

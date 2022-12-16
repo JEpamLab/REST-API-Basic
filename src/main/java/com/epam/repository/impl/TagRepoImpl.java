@@ -31,8 +31,7 @@ public class TagRepoImpl implements TagRepo {
     @Override
     public Optional<Tag> findById(Integer id) {
         List<Tag> list = jdbcTemplate.query(SELECT_TAG_BY_ID, new TagRowMapper(), id);
-        System.out.println("tagbyid");
-        return !list.isEmpty() ? Optional.of(list.get(0)) :
+               return !list.isEmpty() ? Optional.of(list.get(0)) :
                 Optional.empty();
     }
 

@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 @Data
 @Builder
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 public class GiftCertificates {
     private Long id;
@@ -20,11 +20,8 @@ public class GiftCertificates {
     private LocalDateTime last_update_date;
     private List<Tag> tags;
 
-//    public LocalDateTime getLast_update_date(LocalDateTime now) {
-//        return last_update_date;
-//    }
-//
-//    public void setLast_update_date(LocalDateTime last_update_date) {
-//        this.last_update_date = last_update_date;
-//    }
+
+    public GiftCertificates() {
+
+    }
 }
