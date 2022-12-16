@@ -35,7 +35,7 @@ public class GiftRowMapper implements ResultSetExtractor<List<GiftCertificates>>
                     .price(rs.getDouble(GIFT_PRICE))
                     .duration(rs.getInt(GIFT_DURATION))
                     .create_date(rs.getTimestamp(GIFT_CREATE_DATE).toLocalDateTime())
-//                    .last_update_date(rs.getTimestamp(GIFT_LAST_UPDATE_DATE).toLocalDateTime())
+                    .last_update_date(rs.getTimestamp(GIFT_LAST_UPDATE_DATE).toLocalDateTime())
                     .build();
             List<Tag> tags = new ArrayList<>();
             while (!rs.isAfterLast() && rs.getInt(GIFT_ID) == giftCertificate.getId()) {

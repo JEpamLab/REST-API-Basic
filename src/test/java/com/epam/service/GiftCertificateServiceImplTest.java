@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
@@ -26,9 +27,10 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GiftCertificateServiceImplTest {
-
+@Mock
     private GiftCertificateServiceImpl giftCertificateService;
-    private GiftCertificatesRepoImpl giftCertificateDao;
+@Mock
+private GiftCertificatesRepoImpl giftCertificateDao;
 
 
     @BeforeEach

@@ -6,6 +6,7 @@ import com.epam.service.impl.TagServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
@@ -19,8 +20,9 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TagServiceTest {
-
+    @Mock
     private TagService tagServiceImpl;
+    @Mock
     private TagRepoImpl tagRepo;
 
     @BeforeEach
@@ -46,7 +48,7 @@ public class TagServiceTest {
     }
 
     @Test
-    public void findById() throws NullPointerException{
+    public void findById() throws NullPointerException {
         Optional<Tag> tagOptional = tagServiceImpl.findById(2);
         Tag tag = new Tag();
         if (tagOptional.isPresent()) {
@@ -58,7 +60,7 @@ public class TagServiceTest {
 
     @Test
     public void create() throws NullPointerException {
-        Long id=6L;
+        Long id = 6L;
         Tag tagToCreate = new Tag(id, "Tag 6");
         System.out.println(tagToCreate);
         tagServiceImpl.create(tagToCreate);
@@ -78,7 +80,7 @@ public class TagServiceTest {
     }
 
     @Test
-    public void findByName() throws NullPointerException{
+    public void findByName() throws NullPointerException {
         Optional<Tag> tagOptional = tagServiceImpl.findByName("red");
         Tag tag = new Tag();
         if (tagOptional.isPresent()) {
