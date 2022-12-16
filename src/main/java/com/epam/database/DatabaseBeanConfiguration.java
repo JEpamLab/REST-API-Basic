@@ -18,7 +18,7 @@ import java.beans.PropertyVetoException;
 public class DatabaseBeanConfiguration {
 
     private final String driver = "org.postgresql.Driver";
-    private final String url = "jdbc:postgresql://localhost:5432/gift_tag?useSSl=false&serverTimezone=UTC";
+    private final String url = "jdbc:postgresql://localhost:5432/gift_db";
     private final String username = "postgres";
     private final String password = "123";
 

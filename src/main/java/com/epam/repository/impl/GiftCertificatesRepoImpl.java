@@ -58,7 +58,7 @@ public class GiftCertificatesRepoImpl implements GiftCertificatesRepo {
     public void create(GiftCertificates giftCertificate) {
         giftCertificate.setCreate_date(LocalDateTime.now());
         //Get ID of newly created GiftCertificate
-        int giftCertificateId = createGiftCertificate(giftCertificate);
+        Long giftCertificateId = createGiftCertificate(giftCertificate);
         //Get TAGS name to check on uniqueness
         List<Tag> list = giftCertificate.getTags();
         //Create tags which linked to the GiftCertificate
@@ -94,7 +94,7 @@ public class GiftCertificatesRepoImpl implements GiftCertificatesRepo {
     }
 
 
-    private int createTag(Tag tag) {
+    private Long createTag(Tag tag) {
         //Create Statement for Tag
         PreparedStatementCreatorFactory pscfTag = new PreparedStatementCreatorFactory(CREATE_TAG, Types.VARCHAR);
         //Call to get generated key of the new Tag
@@ -116,11 +116,11 @@ public class GiftCertificatesRepoImpl implements GiftCertificatesRepo {
 //            newId= tagKeyHolder.getKey().intValue();
 //        }
         //Get ID of newly created GiftCertificate
-        return (int) Objects.requireNonNull(tagKeyHolder.getKeys().get("tag_id"));
+        return (Long) Objects.requireNonNull(tagKeyHolder.getKeys().get("tag_id"));
 //        return newId;
     }
 
-    private int createGiftCertificate(GiftCertificates giftCertificate) {
+    private Long createGiftCertificate(GiftCertificates giftCertificate) {
         //Create Statement for GiftCertificate
         PreparedStatementCreatorFactory pscfGift = new PreparedStatementCreatorFactory(
                 CREATE_GIFT_CERTIFICATE,
@@ -148,11 +148,11 @@ public class GiftCertificatesRepoImpl implements GiftCertificatesRepo {
 //            newId= giftKeyHolder.getKey().intValue();
 //        }
         //Get ID of newly created GiftCertificate
-        return (int) Objects.requireNonNull(giftKeyHolder.getKeys().get("id"));
+        return (Long) Objects.requireNonNull(giftKeyHolder.getKeys().get("id"));
 //        return newId;
     }
 
-    private void createTags(int giftCertificateId, List<Tag> tags) {
+    private void createTags(Long giftCertificateId, List<Tag> tags) {
         //Pass through the List of gifts
         for (Tag tag : tags) {
             //Get name of each tag
@@ -167,7 +167,7 @@ public class GiftCertificatesRepoImpl implements GiftCertificatesRepo {
                 }
             } else {
                 //If tag does not exist we will create it and then pass to the table
-                int tagId = createTag(tag);
+                Long tagId = createTag(tag);
                 jdbcTemplate.update(CREATE_GIFT_WITH_TAG, giftCertificateId, tagId);
             }
         }

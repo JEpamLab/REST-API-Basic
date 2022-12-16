@@ -9,8 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbca8b4-2d15-4785-9dbe-19145d9c7024" name="Changes" comment="filter have some problems and test not fifnished">
+    <list default="true" id="fbbca8b4-2d15-4785-9dbe-19145d9c7024" name="Changes" comment="adding some tests">
+      <change afterPath="$PROJECT_DIR$/.run/Tomcat 10.0.27.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/WebInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/giftwar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddd36f51-1a06-4500-84fd-3d1d99e5867d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddd36f51-1a06-4500-84fd-3d1d99e5867d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddd36f51-1a06-4500-84fd-3d1d99e5867d/storage_v2/_src_/database/gift_tag.C0ClMg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddd36f51-1a06-4500-84fd-3d1d99e5867d/storage_v2/_src_/database/gift_tag.C0ClMg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/database/DatabaseBeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/database/DatabaseBeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/repository/mapper/GiftRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/repository/mapper/GiftRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,9 +112,9 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/esm/src/main/java/com/epam/repository/mapper&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/esm/build/libs/esm-0.0.1-SNAPSHOT-plain.war&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -110,16 +124,20 @@
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;H2&quot;,
+      &quot;PostgreSQL&quot;
     ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\esm\src\main\java\com\epam\database" />
       <recent name="E:\esm\src\main\java\com\epam\repository\mapper" />
       <recent name="E:\esm\src\test\resources" />
       <recent name="E:\esm\src\test\java\com\epam\repository" />
       <recent name="E:\esm\src\main\java\com\epam\repository\query" />
-      <recent name="E:\esm\src\main\java\com\epam" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\esm\src\test\java\com\epam\service" />
@@ -140,28 +158,74 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.epam.Main" />
-      <module name="esm.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gift_tags.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="ddd36f51-1a06-4500-84fd-3d1d99e5867d/database/gift_tag/schema/public/table/gift_tags.sql" />
-      <script-mode>FILE</script-mode>
+  <component name="RunManager" selected="Gradle.esm [build]">
+    <configuration name="GiftCertificateRepoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.epam.repository.GiftCertificateRepoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="tag.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="ddd36f51-1a06-4500-84fd-3d1d99e5867d/database/gift_db/schema/public/table/tag.sql" />
-      <script-mode>FILE</script-mode>
+    <configuration name="GiftCertificateServiceImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.epam.service.GiftCertificateServiceImplTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TagServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.epam.service.TagServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="esm [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -217,92 +281,6 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-1.8" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <file path="$PROJECT_DIR$/build/libs/esm-1.0-SNAPSHOT.war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/esm_1_0_SNAPSHOT_war" />
-          </settings>
-        </file>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="5f862258-2555-4114-aa0f-01aa035ac885" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51394" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="MakeProject" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.271" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="%IDEA_RUN:TOMCAT_HOME%">
@@ -384,21 +362,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Database Script.gift_tags.sql" />
-      <item itemvalue="Database Script.tag.sql" />
       <item itemvalue="Gradle.esm [war]" />
+      <item itemvalue="Gradle.GiftCertificateRepoTest" />
+      <item itemvalue="Gradle.GiftCertificateServiceImplTest" />
+      <item itemvalue="Gradle.TagServiceTest" />
       <item itemvalue="Gradle.esm [build]" />
       <item itemvalue="Spring Boot.Main" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Main" />
         <item itemvalue="Gradle.esm [build]" />
-        <item itemvalue="Database Script.tag.sql" />
-        <item itemvalue="Database Script.gift_tags.sql" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.GiftCertificateRepoTest" />
+        <item itemvalue="Gradle.GiftCertificateServiceImplTest" />
+        <item itemvalue="Gradle.TagServiceTest" />
+        <item itemvalue="Spring Boot.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -456,6 +434,9 @@
       <workItem from="1671099269995" duration="1795000" />
       <workItem from="1671105515770" duration="1578000" />
       <workItem from="1671120018239" duration="1077000" />
+      <workItem from="1671133548981" duration="6873000" />
+      <workItem from="1671166536905" duration="7802000" />
+      <workItem from="1671180847945" duration="879000" />
     </task>
     <task id="LOCAL-00001" summary="filter have some problems and test not fifnished">
       <created>1671123281011</created>
@@ -464,7 +445,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671123281011</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="database link change">
+      <created>1671132361106</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671132361106</updated>
+    </task>
+    <task id="LOCAL-00003" summary="database link change">
+      <created>1671132399890</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671132399890</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adding some tests">
+      <created>1671167081366</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671167081366</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +477,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="filter-fix" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -483,7 +497,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="filter have some problems and test not fifnished" />
-    <option name="LAST_COMMIT_MESSAGE" value="filter have some problems and test not fifnished" />
+    <MESSAGE value="database link change" />
+    <MESSAGE value="adding some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding some tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -725,12 +741,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/repository/impl/TagRepoImpl.java</url>
-          <line>34</line>
+          <line>33</line>
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/repository/impl/TagRepoImpl.java</url>
-          <line>35</line>
+          <line>34</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -760,12 +776,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>61</line>
+          <line>62</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>62</line>
+          <line>63</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -865,27 +881,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>47</line>
+          <line>48</line>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>48</line>
+          <line>49</line>
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>51</line>
+          <line>52</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -970,7 +986,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1000,27 +1016,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/TagServiceImpl.java</url>
-          <line>42</line>
+          <line>44</line>
           <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/TagServiceImpl.java</url>
-          <line>43</line>
+          <line>45</line>
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>79</line>
+          <line>80</line>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>80</line>
+          <line>81</line>
           <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/controller/GiftCertificatesController.java</url>
-          <line>82</line>
+          <line>83</line>
           <option name="timeStamp" value="181" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1033,11 +1049,226 @@
           <line>73</line>
           <option name="timeStamp" value="184" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/repository/query/QueryCreator.java</url>
           <line>8</line>
           <properties field="BASE_QUERY" class="com.epam.repository.query.QueryCreator" />
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>30</line>
+          <properties field="giftCertificateService" class="com.epam.service.GiftCertificateServiceImplTest" />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/GiftCertificateServiceImplTest.java</url>
+          <line>32</line>
+          <properties field="giftCertificateDao" class="com.epam.service.GiftCertificateServiceImplTest" />
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/repository/GiftCertificateRepoTest.java</url>
+          <line>24</line>
+          <properties field="giftCertificatesRepo" class="com.epam.repository.GiftCertificateRepoTest" />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>23</line>
+          <properties field="tagServiceImpl" class="com.epam.service.TagServiceTest" />
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/com/epam/service/TagServiceTest.java</url>
+          <line>25</line>
+          <properties field="tagRepo" class="com.epam.service.TagServiceTest" />
+          <option name="timeStamp" value="217" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
